@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07197A5A20B2A1E400F806E6 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07197A5920B2A1E400F806E6 /* FriendsViewController.m */; };
-		071DDE1D2109690B009158DA /* Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27.png in Resources */ = {isa = PBXBuildFile; fileRef = 071DDE1C2109690A009158DA /* Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27.png */; };
 		071DDE2221097031009158DA /* ZHRefreshComponet.m in Sources */ = {isa = PBXBuildFile; fileRef = 071DDE2121097031009158DA /* ZHRefreshComponet.m */; };
 		071DDE3E210B1ADF009158DA /* lineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071DDE3D210B1ADF009158DA /* lineView.m */; };
 		074E386C20D8CD6A00C3469A /* MsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E386B20D8CD6A00C3469A /* MsgViewController.m */; };
@@ -65,6 +64,8 @@
 		07EAF47620BE71F200B3284C /* ChatFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF47520BE71F200B3284C /* ChatFriendsCell.m */; };
 		07EAF47920BE720E00B3284C /* ChatMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF47820BE720E00B3284C /* ChatMeCell.m */; };
 		07EAF47C20BE8BCD00B3284C /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF47B20BE8BCD00B3284C /* ChatModel.m */; };
+		07F1DAA32112EE0B00DB05C6 /* UserHitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DAA22112EE0B00DB05C6 /* UserHitView.m */; };
+		07F1DAA62112F04A00DB05C6 /* UserSubOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DAA52112F04A00DB05C6 /* UserSubOneView.m */; };
 		07F9876420BBD82400FD5A6D /* DataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9876320BBD82400FD5A6D /* DataManger.m */; };
 		AE45CA34C57FECC966200D71 /* Pods_BlueToothAbout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7656866566C2FAA119268E86 /* Pods_BlueToothAbout.framework */; };
 /* End PBXBuildFile section */
@@ -91,7 +92,6 @@
 		07197A5920B2A1E400F806E6 /* FriendsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		07197A5B20B2A3F600F806E6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		07197A5C20B2A5C500F806E6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		071DDE1C2109690A009158DA /* Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27.png"; sourceTree = "<group>"; };
 		071DDE2021097031009158DA /* ZHRefreshComponet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHRefreshComponet.h; sourceTree = "<group>"; };
 		071DDE2121097031009158DA /* ZHRefreshComponet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHRefreshComponet.m; sourceTree = "<group>"; };
 		071DDE3C210B1ADF009158DA /* lineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lineView.h; sourceTree = "<group>"; };
@@ -202,6 +202,10 @@
 		07EAF47820BE720E00B3284C /* ChatMeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatMeCell.m; sourceTree = "<group>"; };
 		07EAF47A20BE8BCD00B3284C /* ChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatModel.h; sourceTree = "<group>"; };
 		07EAF47B20BE8BCD00B3284C /* ChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatModel.m; sourceTree = "<group>"; };
+		07F1DAA12112EE0B00DB05C6 /* UserHitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserHitView.h; sourceTree = "<group>"; };
+		07F1DAA22112EE0B00DB05C6 /* UserHitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserHitView.m; sourceTree = "<group>"; };
+		07F1DAA42112F04A00DB05C6 /* UserSubOneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSubOneView.h; sourceTree = "<group>"; };
+		07F1DAA52112F04A00DB05C6 /* UserSubOneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserSubOneView.m; sourceTree = "<group>"; };
 		07F9876220BBD82400FD5A6D /* DataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManger.h; sourceTree = "<group>"; };
 		07F9876320BBD82400FD5A6D /* DataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManger.m; sourceTree = "<group>"; };
 		31338BADA1B15EFBC441D400 /* Pods-BlueToothAbout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothAbout.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout.release.xcconfig"; sourceTree = "<group>"; };
@@ -343,6 +347,7 @@
 		0768850C20AD5C070009E1D7 /* BlueToothAbout */ = {
 			isa = PBXGroup;
 			children = (
+				07F1DA9F2112EDB400DB05C6 /* shi图响应链 */,
 				071DDE1F21096F7A009158DA /* ZHRefresh */,
 				078094B521005A480009E5B7 /* Runtime */,
 				07B4224620FD92AE00705457 /* KVO */,
@@ -460,7 +465,6 @@
 		0770991D20D0B038003C3B7B /* image优化 */ = {
 			isa = PBXGroup;
 			children = (
-				071DDE1C2109690A009158DA /* Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27.png */,
 				0770992020D0B064003C3B7B /* Controller */,
 				0770991F20D0B05D003C3B7B /* Model */,
 				0770991E20D0B057003C3B7B /* View */,
@@ -616,6 +620,25 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		07F1DA9F2112EDB400DB05C6 /* shi图响应链 */ = {
+			isa = PBXGroup;
+			children = (
+				07F1DAA02112EDE800DB05C6 /* View */,
+			);
+			path = "shi图响应链";
+			sourceTree = "<group>";
+		};
+		07F1DAA02112EDE800DB05C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07F1DAA12112EE0B00DB05C6 /* UserHitView.h */,
+				07F1DAA22112EE0B00DB05C6 /* UserHitView.m */,
+				07F1DAA42112F04A00DB05C6 /* UserSubOneView.h */,
+				07F1DAA52112F04A00DB05C6 /* UserSubOneView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		39ED79D967AE4FDFF277C7BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,7 +763,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0770991C20CE5237003C3B7B /* msg.caf in Resources */,
-				071DDE1D2109690B009158DA /* Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27.png in Resources */,
 				0770992820D0BE75003C3B7B /* Property List.plist in Resources */,
 				075E434E20B3F6F6007B1DF3 /* MCBViewCOntroller.storyboard in Resources */,
 				075A6F7C20E381ED00DF1F2E /* blueTeeth.plist in Resources */,
@@ -824,6 +846,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0770992620D0B835003C3B7B /* ImageCell.m in Sources */,
+				07F1DAA62112F04A00DB05C6 /* UserSubOneView.m in Sources */,
 				07EAF47020BE702700B3284C /* ChatViewController.m in Sources */,
 				07D6023220F838C200ED8863 /* ChainProgram.m in Sources */,
 				078094C3210061A70009E5B7 /* TShirt.m in Sources */,
@@ -859,6 +882,7 @@
 				07EAF46B20BE3C5C00B3284C /* SocketViewController.m in Sources */,
 				078094BD21005B740009E5B7 /* NikiFactory.m in Sources */,
 				0763DD4B20C662E600071F16 /* AsySocketViewController.m in Sources */,
+				07F1DAA32112EE0B00DB05C6 /* UserHitView.m in Sources */,
 				076C668620EDB5DC00A25744 /* PathBuilderView.m in Sources */,
 				07E8E1D120F483CC00176D0E /* CycleColloectionView.m in Sources */,
 				078094C6210062620009E5B7 /* FactoryVC.m in Sources */,
