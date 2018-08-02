@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="aMG-7z-5ZP">
+            <objects>
+                <viewController storyboardIdentifier="MCBViewController" id="1Z8-gB-ZdN" customClass="MCBViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lsJ-le-RoB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFb-CO-Jsn">
+                                <rect key="frame" x="15" y="240" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TYO-Wu-0Pt"/>
+                                    <constraint firstAttribute="width" constant="80" id="XNF-5G-pVa"/>
+                                </constraints>
+                                <state key="normal" title="选择照片"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="1Z8-gB-ZdN" eventType="touchUpInside" id="9z0-xc-vZm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulo-fh-y6S">
+                                <rect key="frame" x="155" y="240" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="KCc-nH-O2K"/>
+                                    <constraint firstAttribute="height" constant="30" id="wwN-oJ-LGa"/>
+                                </constraints>
+                                <state key="normal" title="连接设备"/>
+                                <connections>
+                                    <action selector="connectDevice:" destination="1Z8-gB-ZdN" eventType="touchUpInside" id="oWr-m1-DwG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWv-Ob-ffj">
+                                <rect key="frame" x="15" y="54" width="345" height="140"/>
+                                <color key="backgroundColor" red="0.65138819329999997" green="1" blue="0.6665449833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Pqb-Is-Z4A"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBk-k5-num">
+                                <rect key="frame" x="280" y="240" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Iyh-Ow-stJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="WBK-zz-KDA"/>
+                                </constraints>
+                                <state key="normal" title="发送图片"/>
+                                <connections>
+                                    <action selector="postImage:" destination="1Z8-gB-ZdN" eventType="touchUpInside" id="474-HF-C9k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eqT-vj-J1m" firstAttribute="trailing" secondItem="BWv-Ob-ffj" secondAttribute="trailing" constant="15" id="8cG-ie-989"/>
+                            <constraint firstItem="AFb-CO-Jsn" firstAttribute="top" secondItem="BWv-Ob-ffj" secondAttribute="bottom" constant="46" id="9RU-OC-JVA"/>
+                            <constraint firstItem="AFb-CO-Jsn" firstAttribute="leading" secondItem="eqT-vj-J1m" secondAttribute="leading" constant="15" id="EXj-2f-6gM"/>
+                            <constraint firstItem="BWv-Ob-ffj" firstAttribute="top" secondItem="eqT-vj-J1m" secondAttribute="top" constant="34" id="HPK-9Q-Oxc"/>
+                            <constraint firstItem="eqT-vj-J1m" firstAttribute="trailing" secondItem="QBk-k5-num" secondAttribute="trailing" constant="15" id="Qps-hw-khe"/>
+                            <constraint firstItem="Ulo-fh-y6S" firstAttribute="leading" secondItem="AFb-CO-Jsn" secondAttribute="trailing" constant="60" id="cEN-gx-jvC"/>
+                            <constraint firstItem="QBk-k5-num" firstAttribute="top" secondItem="BWv-Ob-ffj" secondAttribute="bottom" constant="46" id="eKy-jH-Get"/>
+                            <constraint firstItem="Ulo-fh-y6S" firstAttribute="top" secondItem="BWv-Ob-ffj" secondAttribute="bottom" constant="46" id="w5F-9c-cU8"/>
+                            <constraint firstItem="BWv-Ob-ffj" firstAttribute="leading" secondItem="eqT-vj-J1m" secondAttribute="leading" constant="15" id="x7b-AJ-tuk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eqT-vj-J1m"/>
+                    </view>
+                    <connections>
+                        <outlet property="theImageView" destination="BWv-Ob-ffj" id="42L-Qu-YBl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfK-HI-5pA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786.39999999999998" y="-971.06446776611699"/>
+        </scene>
+    </scenes>
+</document>

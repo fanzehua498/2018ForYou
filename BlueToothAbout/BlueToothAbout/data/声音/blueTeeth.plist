@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>url</key>
+	<string>http://api.xzztest.zihe8888.com/api/Product/ProductList</string>
+	<key>AppKey</key>
+	<string>yp3Ify2d4PZU33MSdio5ITT4DiHFy59g </string>
+	<key>AppSecret</key>
+	<string>oAyHBnoWGvualtbJgC0v5QMwwKLk9G0B </string>
+</dict>
+</plist>

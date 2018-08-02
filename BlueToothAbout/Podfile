@@ -1,0 +1,10 @@
+target 'BlueToothAbout' do
+pod 'FMDB'
+pod 'Masonry'
+pod 'CocoaAsyncSocket'
+pod 'SDWebImage'
+pod 'AFNetworking'
+pod 'OCSkeleton'
+pod 'ReactiveObjC'
+use_frameworks!
+end
