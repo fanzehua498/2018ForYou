@@ -11,11 +11,13 @@
 
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define WS(weakSelf) __weak __typeof(self) weakSelf = self;
 
 //#import <Masonry.h>
 //#import <AFNetworking.h>
 #import <Masonry/Masonry.h>
 #import <AFNetworking/AFNetworking.h>
+#import <YYModel/YYModel.h>
 #endif /* Header_h */
 
 

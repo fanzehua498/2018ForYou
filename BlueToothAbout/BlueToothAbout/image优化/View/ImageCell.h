@@ -11,5 +11,5 @@
 @interface ImageCell : UITableViewCell
 
 @property(strong,nonatomic)UIImageView *cellImageView;
-
+- (void)configImageWithUrl:(NSString *)url;
 @end

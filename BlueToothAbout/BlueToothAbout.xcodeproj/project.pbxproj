@@ -17,6 +17,11 @@
 		074E387820D900EA00C3469A /* MsgInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E387720D900EA00C3469A /* MsgInvocation.m */; };
 		074E387C20DA314600C3469A /* FingerPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E387B20DA314600C3469A /* FingerPwdViewController.m */; };
 		074E387F20DA315E00C3469A /* FingerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 074E387E20DA315E00C3469A /* FingerView.m */; };
+		07528ECF21181D5F00623FF6 /* LocalMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07528ECE21181D5F00623FF6 /* LocalMsgVC.m */; };
+		07528ED121181E4400623FF6 /* Local.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07528ED021181E4400623FF6 /* Local.plist */; };
+		07528ED421182C9A00623FF6 /* LocalMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07528ED321182C9A00623FF6 /* LocalMsgModel.m */; };
+		07528ED821182D9400623FF6 /* LocalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07528ED621182D9400623FF6 /* LocalCell.m */; };
+		07528ED921182D9400623FF6 /* LocalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07528ED721182D9400623FF6 /* LocalCell.xib */; };
 		075A6F7320E35F0500DF1F2E /* MVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A6F7220E35F0500DF1F2E /* MVPViewController.m */; };
 		075A6F7720E367A600DF1F2E /* ServiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A6F7620E367A600DF1F2E /* ServiceTool.m */; };
 		075A6F7A20E36ACF00DF1F2E /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A6F7920E36ACF00DF1F2E /* Presenter.m */; };
@@ -67,7 +72,7 @@
 		07F1DAA32112EE0B00DB05C6 /* UserHitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DAA22112EE0B00DB05C6 /* UserHitView.m */; };
 		07F1DAA62112F04A00DB05C6 /* UserSubOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DAA52112F04A00DB05C6 /* UserSubOneView.m */; };
 		07F9876420BBD82400FD5A6D /* DataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9876320BBD82400FD5A6D /* DataManger.m */; };
-		AE45CA34C57FECC966200D71 /* Pods_BlueToothAbout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7656866566C2FAA119268E86 /* Pods_BlueToothAbout.framework */; };
+		E08142158A15BC884E134FEC /* Pods_BlueToothAbout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855A6E05CB1F34DAA2DEA4DD /* Pods_BlueToothAbout.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +115,14 @@
 		074E387B20DA314600C3469A /* FingerPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FingerPwdViewController.m; sourceTree = "<group>"; };
 		074E387D20DA315E00C3469A /* FingerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FingerView.h; sourceTree = "<group>"; };
 		074E387E20DA315E00C3469A /* FingerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FingerView.m; sourceTree = "<group>"; };
+		07528ECD21181D5F00623FF6 /* LocalMsgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalMsgVC.h; sourceTree = "<group>"; };
+		07528ECE21181D5F00623FF6 /* LocalMsgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalMsgVC.m; sourceTree = "<group>"; };
+		07528ED021181E4400623FF6 /* Local.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Local.plist; sourceTree = "<group>"; };
+		07528ED221182C9A00623FF6 /* LocalMsgModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalMsgModel.h; sourceTree = "<group>"; };
+		07528ED321182C9A00623FF6 /* LocalMsgModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalMsgModel.m; sourceTree = "<group>"; };
+		07528ED521182D9400623FF6 /* LocalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalCell.h; sourceTree = "<group>"; };
+		07528ED621182D9400623FF6 /* LocalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalCell.m; sourceTree = "<group>"; };
+		07528ED721182D9400623FF6 /* LocalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalCell.xib; sourceTree = "<group>"; };
 		075A6F7120E35F0500DF1F2E /* MVPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPViewController.h; sourceTree = "<group>"; };
 		075A6F7220E35F0500DF1F2E /* MVPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPViewController.m; sourceTree = "<group>"; };
 		075A6F7420E3662900DF1F2E /* ViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewProtocol.h; sourceTree = "<group>"; };
@@ -209,7 +222,7 @@
 		07F9876220BBD82400FD5A6D /* DataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManger.h; sourceTree = "<group>"; };
 		07F9876320BBD82400FD5A6D /* DataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManger.m; sourceTree = "<group>"; };
 		31338BADA1B15EFBC441D400 /* Pods-BlueToothAbout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothAbout.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout.release.xcconfig"; sourceTree = "<group>"; };
-		7656866566C2FAA119268E86 /* Pods_BlueToothAbout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueToothAbout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855A6E05CB1F34DAA2DEA4DD /* Pods_BlueToothAbout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueToothAbout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF2AC37C7B62389E8E5792F /* Pods-BlueToothAbout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothAbout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,7 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE45CA34C57FECC966200D71 /* Pods_BlueToothAbout.framework in Frameworks */,
+				E08142158A15BC884E134FEC /* Pods_BlueToothAbout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +287,45 @@
 				074E387E20DA315E00C3469A /* FingerView.m */,
 			);
 			path = "手势密码";
+			sourceTree = "<group>";
+		};
+		07528EC921181D1200623FF6 /* localMsg */ = {
+			isa = PBXGroup;
+			children = (
+				07528ECC21181D4600623FF6 /* Model */,
+				07528ECB21181D3F00623FF6 /* View */,
+				07528ECA21181D3A00623FF6 /* VC */,
+				07528ED021181E4400623FF6 /* Local.plist */,
+			);
+			path = localMsg;
+			sourceTree = "<group>";
+		};
+		07528ECA21181D3A00623FF6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				07528ECD21181D5F00623FF6 /* LocalMsgVC.h */,
+				07528ECE21181D5F00623FF6 /* LocalMsgVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		07528ECB21181D3F00623FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07528ED521182D9400623FF6 /* LocalCell.h */,
+				07528ED621182D9400623FF6 /* LocalCell.m */,
+				07528ED721182D9400623FF6 /* LocalCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07528ECC21181D4600623FF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07528ED221182C9A00623FF6 /* LocalMsgModel.h */,
+				07528ED321182C9A00623FF6 /* LocalMsgModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		075A6F6C20E35E9D00DF1F2E /* MVP */ = {
@@ -577,6 +629,7 @@
 		07EAF46D20BE6FFA00B3284C /* scoket */ = {
 			isa = PBXGroup;
 			children = (
+				07528EC921181D1200623FF6 /* localMsg */,
 				07EAF47320BE71B000B3284C /* ViewController */,
 				07EAF47220BE71AA00B3284C /* model */,
 				07EAF47120BE71A400B3284C /* view */,
@@ -651,7 +704,7 @@
 		59A9FDD51B5DD9BA4E6A7B0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7656866566C2FAA119268E86 /* Pods_BlueToothAbout.framework */,
+				855A6E05CB1F34DAA2DEA4DD /* Pods_BlueToothAbout.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -667,7 +720,7 @@
 				0768850620AD5C070009E1D7 /* Sources */,
 				0768850720AD5C070009E1D7 /* Frameworks */,
 				0768850820AD5C070009E1D7 /* Resources */,
-				F1D866CF4CFD2C75F85A63D3 /* [CP] Embed Pods Frameworks */,
+				3EAE15EC22DA0831290BADF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -763,11 +816,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0770991C20CE5237003C3B7B /* msg.caf in Resources */,
+				07528ED921182D9400623FF6 /* LocalCell.xib in Resources */,
 				0770992820D0BE75003C3B7B /* Property List.plist in Resources */,
 				075E434E20B3F6F6007B1DF3 /* MCBViewCOntroller.storyboard in Resources */,
 				075A6F7C20E381ED00DF1F2E /* blueTeeth.plist in Resources */,
 				0768851A20AD5C160009E1D7 /* LaunchScreen.storyboard in Resources */,
 				0768851720AD5C160009E1D7 /* Assets.xcassets in Resources */,
+				07528ED121181E4400623FF6 /* Local.plist in Resources */,
 				0768851520AD5C070009E1D7 /* Main.storyboard in Resources */,
 				07EAF46C20BE3C5C00B3284C /* SocketViewController.xib in Resources */,
 			);
@@ -790,6 +845,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3EAE15EC22DA0831290BADF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/OCSkeleton/OCSkeleton.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCSkeleton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		818A235E7601DE8934E8CD0B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -806,36 +893,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F1D866CF4CFD2C75F85A63D3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/OCSkeleton/OCSkeleton.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCSkeleton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -878,9 +935,12 @@
 				07E8E1CE20F442C700176D0E /* PopItemView.m in Sources */,
 				074E387520D8FED400C3469A /* ForWardObj.m in Sources */,
 				07D6022F20F8382900ED8863 /* ListModel.mm in Sources */,
+				07528ECF21181D5F00623FF6 /* LocalMsgVC.m in Sources */,
 				078094B420FECAED0009E5B7 /* NSObject+KVOReloadCategory.m in Sources */,
 				07EAF46B20BE3C5C00B3284C /* SocketViewController.m in Sources */,
 				078094BD21005B740009E5B7 /* NikiFactory.m in Sources */,
+				07528ED421182C9A00623FF6 /* LocalMsgModel.m in Sources */,
+				07528ED821182D9400623FF6 /* LocalCell.m in Sources */,
 				0763DD4B20C662E600071F16 /* AsySocketViewController.m in Sources */,
 				07F1DAA32112EE0B00DB05C6 /* UserHitView.m in Sources */,
 				076C668620EDB5DC00A25744 /* PathBuilderView.m in Sources */,

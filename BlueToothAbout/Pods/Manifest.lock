@@ -24,6 +24,7 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - OCSkeleton
   - ReactiveObjC
   - SDWebImage
+  - YYModel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -43,6 +45,7 @@ SPEC REPOS:
     - OCSkeleton
     - ReactiveObjC
     - SDWebImage
+    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -52,7 +55,8 @@ SPEC CHECKSUMS:
   OCSkeleton: 8d022735d80f36ac38b38c58e1fb90db05357616
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 2c0dcde16ba6d31afd5faea2c48a6944a9aa29b6
+PODFILE CHECKSUM: e199a439c9c5ad45dc6ed4f9bc4283a21bb829c7
 
 COCOAPODS: 1.5.3

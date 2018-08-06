@@ -7,6 +7,7 @@
 //
 
 #import "ImageCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation ImageCell
 
@@ -26,6 +27,14 @@
         
     }
     return self;
+}
+
+- (void)configImageWithUrl:(NSString *)url
+{
+//    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        
+//    }];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"] options:SDWebImageProgressiveDownload completed:nil];
 }
 
 - (void)awakeFromNib {

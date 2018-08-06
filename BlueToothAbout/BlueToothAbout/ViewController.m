@@ -18,6 +18,7 @@
 #import "AsySocketViewController.h"
 #import "imageViewController.h"
 #import "FingerPwdViewController.h"
+#import "LocalMsgVC.h"
 
 #import "MsgViewController.h"
 #import "MVPViewController.h"
@@ -136,13 +137,13 @@
     
     
     
-    UserHitView *hit = [[UserHitView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
-    hit.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:hit];
-    
-    UserSubOneView *sub = [[UserSubOneView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
-    [self.view addSubview:sub];
-    sub.backgroundColor = [UIColor orangeColor];
+//    UserHitView *hit = [[UserHitView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
+//    hit.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:hit];
+//    
+//    UserSubOneView *sub = [[UserSubOneView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
+//    [self.view addSubview:sub];
+//    sub.backgroundColor = [UIColor orangeColor];
     
 //    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(200, 200, 25, 25) cornerRadius:25];
 ////    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:date.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(12.5, 12.5)];
@@ -155,17 +156,20 @@
 //    date.layer.mask = sharp;
 }
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-////    [manger connectToServer];
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+//    [manger connectToServer];
 //    USEVC *vc = [USEVC new];
 //    [self.navigationController pushViewController:vc animated:YES];
-////
-////    FactoryVC *vc = [FactoryVC new];
-////    [self.navigationController pushViewController:vc animated:YES];
-////    imageViewController *vc = [imageViewController new];
-////    [self.navigationController pushViewController:vc animated:YES];
-//}
+//
+//    FactoryVC *vc = [FactoryVC new];
+//    [self.navigationController pushViewController:vc animated:YES];
+//    imageViewController *vc = [imageViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    LocalMsgVC *vc = [LocalMsgVC new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {

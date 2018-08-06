@@ -42,6 +42,7 @@
 #import "imageViewController.h"
 #import "ImageCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/SDWebImageDownloaderOperation.h>
 //#import <UIImageView+WebCache.h>
 #import "LetterIndexView.h"
 #import <ImageIO/ImageIO.h>
@@ -60,6 +61,9 @@ typedef void(^imageBlock)(UIImageView *imageView);
 
 @end
 
+static BOOL SDImageCacheOldShouldDecompressImages = YES;
+static BOOL SDImagedownloderOldShouldDecompressImages = YES;
+
 @implementation imageViewController
 
 - (void)runrunrun
@@ -67,21 +71,35 @@ typedef void(^imageBlock)(UIImageView *imageView);
     NSLog(@"runrunrun");
 }
 
+-(void)loadView
+{
+    [super loadView];
+    NSLog(@"loadView");
+    SDImageCache *canche = [SDImageCache sharedImageCache];
+    canche.config.shouldCacheImagesInMemory = NO;
+    SDImageCacheOldShouldDecompressImages = canche.config.shouldDecompressImages;
+    canche.config.shouldDecompressImages = NO;
+    
+    SDWebImageDownloader *downloder = [SDWebImageDownloader sharedDownloader];
+    SDImagedownloderOldShouldDecompressImages = downloder.shouldDecompressImages;
+    downloder.shouldDecompressImages = NO;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+//
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.maxQueueLength = 5;
-    self.tasks = [NSMutableArray array];
+//    self.maxQueueLength = 5;
+//    self.tasks = [NSMutableArray array];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Property List.plist" ofType:nil];
     self.dataArr =[NSArray arrayWithContentsOfFile:path];
-    [self addRunloop];
+//    [self addRunloop];
 //    [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(runrunrun) userInfo:nil repeats:YES];
     self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight - 64) style:UITableViewStylePlain];
     self.table.delegate = self;
     self.table.dataSource = self;
     
-//    [self.view addSubview:self.table];
+    [self.view addSubview:self.table];
 
 //    LetterIndexView * indexV = [[LetterIndexView alloc] initWithFrame:CGRectMake(ScreenWidth-20, 64, 20, ScreenHeight-64) Count:nil];
 //    indexV.backgroundColor = [UIColor grayColor];
@@ -98,48 +116,55 @@ typedef void(^imageBlock)(UIImageView *imageView);
 
     
 //    [self caAuthent];
-    [self imageInfo:nil];
+//    [self imageInfo:nil];
     
 }
-
+-(void)dealloc
+{
+    SDImageCache *canche = [SDImageCache sharedImageCache];
+    canche.config.shouldDecompressImages = SDImageCacheOldShouldDecompressImages;
+    
+    SDWebImageDownloader *downloder = [SDWebImageDownloader sharedDownloader];
+    downloder.shouldDecompressImages = SDImagedownloderOldShouldDecompressImages;
+}
 
 - (void)imageInfo:(UIImageView *)infoIm{
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
-//        NSURL *url = [NSURL URLWithString:@"https://static.zihe8888.com/Files/Product/20180611/undefined/3c00f8a9a3244630abb2a6f3cf6c0d6b.jpg"];
-        NSString * path = [[NSBundle mainBundle] pathForResource:@"Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27" ofType:@"png"];
-        
-        NSURL *url = [NSURL fileURLWithPath:path];
-        
-        CGImageRef infoImage = NULL;
-        CGImageSourceRef infoSource;
-
-        infoSource = CGImageSourceCreateWithURL((CFURLRef)url, NULL);
-        infoImage = CGImageSourceCreateImageAtIndex(infoSource, 0, NULL);
-//        infoImage = CGImageSourceCreateThumbnailAtIndex(infoSource, 0, NULL);
-        NSDictionary *infoDic = (__bridge NSDictionary *) CGImageSourceCopyPropertiesAtIndex(infoSource, 0, NULL);
-        NSDictionary *infoDic1 = (__bridge NSDictionary *)CGImageSourceCopyProperties(infoSource, NULL);
-        NSLog(@"infoDic1:%@\n infoDic:%@",infoDic1,infoDic);
-        
-        NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 
-                                 [NSNumber numberWithBool:NO], (NSString *)kCGImageSourceShouldCache,
-                                 
-                                 nil];
-        
-        CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(infoSource, 0, (__bridge CFDictionaryRef)options);
-//        CFDictionaryRef imageProperties = CGImageSourceCopyProperties(infoSource, (__bridge CFDictionaryRef)options);
-        
-        NSLog(@"%@",imageProperties);
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
 //
-        CFRelease(infoSource);
-
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            infoIm.image = [UIImage imageWithCGImage:infoImage];
-        });
-    });
-    
+////        NSURL *url = [NSURL URLWithString:@"https://static.zihe8888.com/Files/Product/20180611/undefined/3c00f8a9a3244630abb2a6f3cf6c0d6b.jpg"];
+//        NSString * path = [[NSBundle mainBundle] pathForResource:@"Simulator Screen Shot - iPhone 8 - 2018-07-25 at 18.02.27" ofType:@"png"];
+//
+//        NSURL *url = [NSURL fileURLWithPath:path];
+//
+//        CGImageRef infoImage = NULL;
+//        CGImageSourceRef infoSource;
+//
+//        infoSource = CGImageSourceCreateWithURL((CFURLRef)url, NULL);
+//        infoImage = CGImageSourceCreateImageAtIndex(infoSource, 0, NULL);
+////        infoImage = CGImageSourceCreateThumbnailAtIndex(infoSource, 0, NULL);
+//        NSDictionary *infoDic = (__bridge NSDictionary *) CGImageSourceCopyPropertiesAtIndex(infoSource, 0, NULL);
+//        NSDictionary *infoDic1 = (__bridge NSDictionary *)CGImageSourceCopyProperties(infoSource, NULL);
+//        NSLog(@"infoDic1:%@\n infoDic:%@",infoDic1,infoDic);
+//
+//        NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+//
+//                                 [NSNumber numberWithBool:NO], (NSString *)kCGImageSourceShouldCache,
+//
+//                                 nil];
+//
+//        CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(infoSource, 0, (__bridge CFDictionaryRef)options);
+////        CFDictionaryRef imageProperties = CGImageSourceCopyProperties(infoSource, (__bridge CFDictionaryRef)options);
+//
+//        NSLog(@"%@",imageProperties);
+////
+//        CFRelease(infoSource);
+//
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            infoIm.image = [UIImage imageWithCGImage:infoImage];
+//        });
+//    });
+//
 }
 
 
@@ -177,53 +202,53 @@ typedef void(^imageBlock)(UIImageView *imageView);
 - (void)downloadImage:(UIImageView *)imageView
 {
     
-    AFHTTPSessionManager*session = [AFHTTPSessionManager manager];
-    session.requestSerializer= [AFHTTPRequestSerializer serializer];
-    session.responseSerializer= [AFHTTPResponseSerializer serializer];
-    
-    NSURLRequest*request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://static.zihe8888.com/Files/Product/20180608/2193/1c36f8e9752f4fe3992879f0fa3da763.jpg"]];
-    
- 
-    
-    NSURLSessionDownloadTask*download = [session downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        NSLog(@"targetPath:%@",targetPath);
-        NSString *filePathfinal = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingString:response.suggestedFilename];
-        NSFileManager*fileManager = [NSFileManager defaultManager];
-        BOOL isFile = [fileManager fileExistsAtPath:filePathfinal];
-        if (!isFile) {
-            BOOL success = [fileManager moveItemAtURL:targetPath toURL:[NSURL fileURLWithPath:filePathfinal] error:nil];
-            if (success) {
-                NSLog(@"succ");
-            }else{
-                NSLog(@"fail");
-            }
-        }else{
-            NSLog(@"已存在");
-        }
-        return targetPath;
-//        return[targetPath URLByAppendingPathComponent:[response suggestedFilename]isDirectory:NO];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        NSLog(@"response:%@,filePath:%@,error%@",response,filePath,error.localizedDescription);
-
-        //判断目录里面是否存在这个图片
-        NSFileManager*fileManager = [NSFileManager defaultManager];
-        NSString *filePathfinal = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingString:response.suggestedFilename];
-        
-        BOOL isFile = [fileManager fileExistsAtPath:filePathfinal];
-        if (isFile) {
-            //更新界面需要使用主线程
-            dispatch_async(dispatch_get_main_queue(), ^{
-                //设置图片视图的的图片
-                imageView.image = [UIImage imageWithContentsOfFile:filePathfinal];
-                [self.table reloadData];
-            });
-        }
-    }];
-    
-    [download resume];
-    
+//    AFHTTPSessionManager*session = [AFHTTPSessionManager manager];
+//    session.requestSerializer= [AFHTTPRequestSerializer serializer];
+//    session.responseSerializer= [AFHTTPResponseSerializer serializer];
+//
+//    NSURLRequest*request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://static.zihe8888.com/Files/Product/20180608/2193/1c36f8e9752f4fe3992879f0fa3da763.jpg"]];
+//
+//
+//
+//    NSURLSessionDownloadTask*download = [session downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+//
+//    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+//        NSLog(@"targetPath:%@",targetPath);
+//        NSString *filePathfinal = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingString:response.suggestedFilename];
+//        NSFileManager*fileManager = [NSFileManager defaultManager];
+//        BOOL isFile = [fileManager fileExistsAtPath:filePathfinal];
+//        if (!isFile) {
+//            BOOL success = [fileManager moveItemAtURL:targetPath toURL:[NSURL fileURLWithPath:filePathfinal] error:nil];
+//            if (success) {
+//                NSLog(@"succ");
+//            }else{
+//                NSLog(@"fail");
+//            }
+//        }else{
+//            NSLog(@"已存在");
+//        }
+//        return targetPath;
+////        return[targetPath URLByAppendingPathComponent:[response suggestedFilename]isDirectory:NO];
+//    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+//        NSLog(@"response:%@,filePath:%@,error%@",response,filePath,error.localizedDescription);
+//
+//        //判断目录里面是否存在这个图片
+//        NSFileManager*fileManager = [NSFileManager defaultManager];
+//        NSString *filePathfinal = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingString:response.suggestedFilename];
+//
+//        BOOL isFile = [fileManager fileExistsAtPath:filePathfinal];
+//        if (isFile) {
+//            //更新界面需要使用主线程
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                //设置图片视图的的图片
+//                imageView.image = [UIImage imageWithContentsOfFile:filePathfinal];
+//                [self.table reloadData];
+//            });
+//        }
+//    }];
+//
+//    [download resume];
+//
 //    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://static.zihe8888.com/Files/Product/20180608/2193/1c36f8e9752f4fe3992879f0fa3da763.jpg"]];
 ////
 //    NSURLSessionDownloadTask *task =[[AFHTTPSessionManager manager] downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -252,29 +277,29 @@ typedef void(^imageBlock)(UIImageView *imageView);
 //    [task resume];
 }
 
-- (UIImage *)ScaleImage:(UIImage *)image size:(CGSize )size
-{
-    UIImage *NewImage = image;
-    NSData *data = UIImageJPEGRepresentation(image, 1);
-    if (data.length > 1024*1024) {
-        UIGraphicsBeginImageContextWithOptions(size, YES, 1);
-        [NewImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
-        UIGraphicsEndImageContext();
-    }
-    return NewImage;
-}
+//- (UIImage *)ScaleImage:(UIImage *)image size:(CGSize )size
+//{
+//    UIImage *NewImage = image;
+//    NSData *data = UIImageJPEGRepresentation(image, 1);
+//    if (data.length > 1024*1024) {
+//        UIGraphicsBeginImageContextWithOptions(size, YES, 1);
+//        [NewImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
+//        UIGraphicsEndImageContext();
+//    }
+//    return NewImage;
+//}
 
-- (void)downDataImage:(UIImage *)image
-{
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://static.zihe8888.com/Files/Product/20180608/2193/1c36f8e9752f4fe3992879f0fa3da763.jpg"]];
-    
-    CGBitmapInfo bitInfo = CGImageGetBitmapInfo(image.CGImage);
-    size_t bitsPerComponent = CGImageGetBitsPerComponent(image.CGImage);
-    // CGImageGetBytesPerRow() calculates incorrectly in iOS 5.0, so defer to CGBitmapContextCreate
-    size_t bytesPerRow = 0;
-    
-//    CGContextRef context = CGBitmapContextCreate(NULL, ScreenWidth, 200, bitsPerComponent, bytesPerRow, <#CGColorSpaceRef  _Nullable space#>, <#uint32_t bitmapInfo#>)
-}
+//- (void)downDataImage:(UIImage *)image
+//{
+//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://static.zihe8888.com/Files/Product/20180608/2193/1c36f8e9752f4fe3992879f0fa3da763.jpg"]];
+//
+//    CGBitmapInfo bitInfo = CGImageGetBitmapInfo(image.CGImage);
+//    size_t bitsPerComponent = CGImageGetBitsPerComponent(image.CGImage);
+//    // CGImageGetBytesPerRow() calculates incorrectly in iOS 5.0, so defer to CGBitmapContextCreate
+//    size_t bytesPerRow = 0;
+//
+////    CGContextRef context = CGBitmapContextCreate(NULL, ScreenWidth, 200, bitsPerComponent, bytesPerRow, <#CGColorSpaceRef  _Nullable space#>, <#uint32_t bitmapInfo#>)
+//}
 
 
 
@@ -304,7 +329,8 @@ typedef void(^imageBlock)(UIImageView *imageView);
 //                cell.cellImageView.image = [UIImage imageWithData:data];
 //            });
 //        });
-    
+     NSString *url = self.dataArr[indexPath.row ];
+    [cell configImageWithUrl:url];
         @autoreleasepool{
 //            NSString *url = self.dataArr[indexPath.row ];
 //            [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"]];
@@ -313,12 +339,12 @@ typedef void(^imageBlock)(UIImageView *imageView);
 
         }
     
-        [self addTask:indexPath block:^{
-            
-            
-            
-//            [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"]];
-        }];
+//        [self addTask:indexPath block:^{
+//
+//
+//
+////            [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"]];
+//        }];
 //        [self addTask:^{
     
 //            [cell.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"] options:SDWebImageProgressiveDownload];
@@ -348,56 +374,53 @@ typedef void(^imageBlock)(UIImageView *imageView);
 }
 */
 
--(void)dealloc
-{
-    NSLog(@"dededede");
-}
+
 
 #pragma mark - cfRunloop
-- (void)addRunloop{
-    CFRunLoopRef runloop = CFRunLoopGetCurrent();
-    
-    //创建观察者
-    static CFRunLoopObserverRef myObserver;
-    
-    CFRunLoopObserverContext context = {
-        0,
-        (__bridge void *)self,
-        &CFRetain,
-        &CFRelease,
-        NULL
-    };
-    
-    myObserver = CFRunLoopObserverCreate(NULL, kCFRunLoopBeforeWaiting, YES, 0, &callBack, &context);
-    
-    //添加观察
-    CFRunLoopAddObserver(runloop, myObserver, kCFRunLoopCommonModes);
-    
-    CFRelease(myObserver);
-}
-
-static void callBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
-
-    imageViewController *vc = (__bridge imageViewController *)info;
-    if (vc.tasks.count == 0) {
-        return;
-    }
-    runloopBlock block = vc.tasks.firstObject;
-    block();
-    [vc.tasks removeObjectAtIndex:0];
-    
-}
-
-
-- (void)addTask:(NSIndexPath *)path block:(runloopBlock)task{
-    [self.tasks addObject:task];
-    if (self.tasks.count > self.maxQueueLength) {
-        [self.tasks removeObjectAtIndex:0];
-//        NSIndexPath *indexpath = [NSIndexPath indexPathForRow:path.row - self.maxQueueLength inSection:path.section];
-//        ImageCell *cell = [self.table cellForRowAtIndexPath:indexpath];
-//        [cell.imageView sd_cancelCurrentAnimationImagesLoad];
-    }
-}
+//- (void)addRunloop{
+//    CFRunLoopRef runloop = CFRunLoopGetCurrent();
+//
+//    //创建观察者
+//    static CFRunLoopObserverRef myObserver;
+//
+//    CFRunLoopObserverContext context = {
+//        0,
+//        (__bridge void *)self,
+//        &CFRetain,
+//        &CFRelease,
+//        NULL
+//    };
+//
+//    myObserver = CFRunLoopObserverCreate(NULL, kCFRunLoopBeforeWaiting, YES, 0, &callBack, &context);
+//
+//    //添加观察
+//    CFRunLoopAddObserver(runloop, myObserver, kCFRunLoopCommonModes);
+//
+//    CFRelease(myObserver);
+//}
+//
+//static void callBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
+//
+//    imageViewController *vc = (__bridge imageViewController *)info;
+//    if (vc.tasks.count == 0) {
+//        return;
+//    }
+//    runloopBlock block = vc.tasks.firstObject;
+//    block();
+//    [vc.tasks removeObjectAtIndex:0];
+//
+//}
+//
+//
+//- (void)addTask:(NSIndexPath *)path block:(runloopBlock)task{
+//    [self.tasks addObject:task];
+//    if (self.tasks.count > self.maxQueueLength) {
+//        [self.tasks removeObjectAtIndex:0];
+////        NSIndexPath *indexpath = [NSIndexPath indexPathForRow:path.row - self.maxQueueLength inSection:path.section];
+////        ImageCell *cell = [self.table cellForRowAtIndexPath:indexpath];
+////        [cell.imageView sd_cancelCurrentAnimationImagesLoad];
+//    }
+//}
 
 
 @end
