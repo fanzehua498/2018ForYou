@@ -163,7 +163,7 @@
         char *buf[1024];
         ssize_t recLen = recv(self.ClientSocket, buf, sizeof(buf), MSG_WAITALL);
         
-        NSData *data = [NSData dataWithBytesNoCopy:buf length:recLen freeWhenDone:YES];
+//        NSData *data = [NSData dataWithBytesNoCopy:buf length:recLen freeWhenDone:YES];
         
         NSString *recvStr = [[NSString alloc] initWithBytes:buf length:recLen encoding:NSUTF8StringEncoding];
         

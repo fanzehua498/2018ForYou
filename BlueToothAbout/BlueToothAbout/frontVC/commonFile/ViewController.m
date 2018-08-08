@@ -29,6 +29,7 @@
 #import "lineView.h"
 #import "UserHitView.h"
 #import "UserSubOneView.h"
+#import <SDWebImage/SDImageCache.h>
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,GKPeerPickerControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>
 {
     NSInteger lastIndex;
@@ -66,7 +67,7 @@
     NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"%@",json);
     
-    
+    [SDImageCache sharedImageCache] ;
     int result = [self lookForSingleDog:@[@1,@1,@2,@2,@3,@3,@4,@4,@5,@5,@6]];
     NSLog(@"result:%d",result);
     int a = 15;

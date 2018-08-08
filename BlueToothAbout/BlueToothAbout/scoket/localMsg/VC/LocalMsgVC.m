@@ -45,15 +45,7 @@
 - (void)addLocalData{
     self.currentIndex ++;
     [self readDataWithIndex:self.currentIndex];
-//    LocalMsgModel *model = [LocalMsgModel yy_modelWithDictionary:self.totalArr[0]];
-//    [self.localData insertObject:model atIndex:0];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//
-//       [self.table reloadData];;
-//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
-//        [self.table scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
-//         [self.table setContentOffset:CGPointMake(0, 140-10) animated:YES];
-//    });
+
 }
 
 - (void)readDataWithIndex:(NSInteger )index
