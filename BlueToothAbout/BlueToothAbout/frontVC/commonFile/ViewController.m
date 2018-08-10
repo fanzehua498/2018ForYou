@@ -30,16 +30,25 @@
 #import "UserHitView.h"
 #import "UserSubOneView.h"
 #import <SDWebImage/SDImageCache.h>
+
+#import "ZHRefreshComponet.h"
+
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,GKPeerPickerControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>
 {
     NSInteger lastIndex;
     ScoketManger *manger;
+    
+    UIView *redView;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *theImageView;
 
 @property(strong,nonatomic)GKSession *session;
 
 @property(strong,nonatomic)MCSession *sessionMC;
+
+@property (nonatomic ,strong) ZHRefreshComponet *ref;
+
+
 @end
 
 @implementation ViewController
@@ -136,7 +145,9 @@
     lineView *lin = [[lineView alloc] initWithFrame:CGRectMake(0, 100, 375, 100)];
 //    [self.view addSubview:lin];
     
-    
+//    self.ref = [[ZHRefreshComponet alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
+//    self.ref.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:self.ref];
     
 //    UserHitView *hit = [[UserHitView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
 //    hit.backgroundColor = [UIColor grayColor];
@@ -155,10 +166,16 @@
 //    sharp.frame = date.bounds;
 //    sharp.path = path.CGPath;
 //    date.layer.mask = sharp;
+    
+    [self viewAnimation];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+  
+//    redView.transform = CGAffineTransformMakeRotation(-M_PI_4);
+//    redView.transform = CGAffineTransformRotate(redView.transform, -M_PI_4);
+    redView.layer.transform = CATransform3DRotate(redView.layer.transform, -M_PI_4, 0, 1, 0);
 //    [manger connectToServer];
 //    USEVC *vc = [USEVC new];
 //    [self.navigationController pushViewController:vc animated:YES];
@@ -168,9 +185,15 @@
 //    imageViewController *vc = [imageViewController new];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    LocalMsgVC *vc = [LocalMsgVC new];
-    [self.navigationController pushViewController:vc animated:YES];
+//    LocalMsgVC *vc = [LocalMsgVC new];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -329,6 +352,51 @@
         result = index.intValue ^ result;
     }
     return result;
+}
+
+
+- (void)viewAnimation{
+    
+    redView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    redView.backgroundColor = [UIColor grayColor];
+    CAGradientLayer *rlayr = [CAGradientLayer new];
+    rlayr.frame = CGRectMake(100, 100,100, CGRectGetHeight(redView.frame));;
+    rlayr.colors = @[(id)[[UIColor blueColor] colorWithAlphaComponent:0.2].CGColor,(id)[[UIColor orangeColor] colorWithAlphaComponent:0.2].CGColor,(id)[[UIColor purpleColor] colorWithAlphaComponent:0.2].CGColor];
+    rlayr.locations = @[@0.2,@0.5,@0.8];
+    rlayr.startPoint = CGPointMake(0, 0.5);
+    rlayr.endPoint = CGPointMake(1, 0.5);
+//    [self.view.layer addSublayer:rlayr];
+    
+    [self.view addSubview:redView];
+    
+//    CATransform3DRotate(<#CATransform3D t#>, <#CGFloat angle#>, <#CGFloat x#>, <#CGFloat y#>, <#CGFloat z#>)
+//    redView.transform = CGAffineTransformMakeRotation(-M_PI_4);
+    redView.layer.transform = CATransform3DMakeRotation(-M_PI_4, 0, 1, 0);
+    
+//    CABasicAnimation *theAnimation;
+//    theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+//    theAnimation.duration=8;
+//    theAnimation.removedOnCompletion = NO;
+//    theAnimation.repeatCount = 100;
+//    theAnimation.fromValue = [NSNumber numberWithFloat:0];
+//    theAnimation.toValue = [NSNumber numberWithFloat:M_PI];
+//    [rlayr addAnimation:theAnimation forKey:@"animateTransform"];
+//    [rlayr setAnchorPoint:CGPointMake(- 0.5, 0.5)];
+    
+//    UIView *grView = [[UIView alloc] initWithFrame:CGRectMake(250, 100, 100, 100)];
+//    grView.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:grView];
+//
+//    CABasicAnimation *theAnimation1;
+//    theAnimation1=[CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+//    theAnimation1.duration=8;
+//    theAnimation1.removedOnCompletion = NO;
+//    theAnimation1.repeatCount = 100;
+//    theAnimation1.fromValue = [NSNumber numberWithFloat:0];
+//    theAnimation1.toValue = [NSNumber numberWithFloat:-M_PI * 2];
+//    [grView.layer addAnimation:theAnimation1 forKey:@"animateTransform"];
+//    [grView.layer setAnchorPoint:CGPointMake(1, 0.5)];
+    
 }
 
 

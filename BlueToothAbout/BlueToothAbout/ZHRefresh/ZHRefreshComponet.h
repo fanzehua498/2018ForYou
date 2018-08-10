@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger ,ZHRefreshingState) {
+    ZHRefreshingStateNone          = 1,
+    ZHRefreshingStateScrolling,
+    ZHRefreshingStateRead,
+    ZHRefreshingStateRefreshing,
+    ZHRefreshingStateEndRefresh
+    
+};
+
 @interface ZHRefreshComponet : UIView
 
 @property (nonatomic ,strong) UILabel *titleLabel;
@@ -20,6 +29,6 @@
  */
 @property(copy,nonatomic)void (^refreshHandler)(ZHRefreshComponet *refresh);
 
-
-
+- (void)addlabel;
+- (void)endLabel;
 @end

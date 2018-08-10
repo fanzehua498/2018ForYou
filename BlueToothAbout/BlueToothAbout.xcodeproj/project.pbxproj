@@ -23,8 +23,8 @@
 		07528ED821182D9400623FF6 /* LocalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07528ED621182D9400623FF6 /* LocalCell.m */; };
 		07528ED921182D9400623FF6 /* LocalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07528ED721182D9400623FF6 /* LocalCell.xib */; };
 		07528EDF211A867200623FF6 /* ZHZombieProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07528EDE211A867200623FF6 /* ZHZombieProxy.m */; };
-		07528EE1211AD5AC00623FF6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07528EE0211AD5AC00623FF6 /* Default-568h@2x.png */; };
 		07528EE3211AD8E100623FF6 /* note in Resources */ = {isa = PBXBuildFile; fileRef = 07528EE2211AD8E100623FF6 /* note */; };
+		07528EE8211D69E500623FF6 /* ZAnimatianView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07528EE7211D69E500623FF6 /* ZAnimatianView.m */; };
 		075A6F7320E35F0500DF1F2E /* MVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A6F7220E35F0500DF1F2E /* MVPViewController.m */; };
 		075A6F7720E367A600DF1F2E /* ServiceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A6F7620E367A600DF1F2E /* ServiceTool.m */; };
 		075A6F7A20E36ACF00DF1F2E /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A6F7920E36ACF00DF1F2E /* Presenter.m */; };
@@ -128,8 +128,9 @@
 		07528ED721182D9400623FF6 /* LocalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalCell.xib; sourceTree = "<group>"; };
 		07528EDD211A867200623FF6 /* ZHZombieProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHZombieProxy.h; sourceTree = "<group>"; };
 		07528EDE211A867200623FF6 /* ZHZombieProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHZombieProxy.m; sourceTree = "<group>"; };
-		07528EE0211AD5AC00623FF6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07528EE2211AD8E100623FF6 /* note */ = {isa = PBXFileReference; lastKnownFileType = text; path = note; sourceTree = "<group>"; };
+		07528EE6211D69E500623FF6 /* ZAnimatianView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAnimatianView.h; sourceTree = "<group>"; };
+		07528EE7211D69E500623FF6 /* ZAnimatianView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAnimatianView.m; sourceTree = "<group>"; };
 		075A6F7120E35F0500DF1F2E /* MVPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPViewController.h; sourceTree = "<group>"; };
 		075A6F7220E35F0500DF1F2E /* MVPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPViewController.m; sourceTree = "<group>"; };
 		075A6F7420E3662900DF1F2E /* ViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewProtocol.h; sourceTree = "<group>"; };
@@ -385,6 +386,23 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		07528EE4211D69AE00623FF6 /* MoreViews */ = {
+			isa = PBXGroup;
+			children = (
+				07528EE5211D69C200623FF6 /* View */,
+			);
+			path = MoreViews;
+			sourceTree = "<group>";
+		};
+		07528EE5211D69C200623FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07528EE6211D69E500623FF6 /* ZAnimatianView.h */,
+				07528EE7211D69E500623FF6 /* ZAnimatianView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		075A6F6C20E35E9D00DF1F2E /* MVP */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +452,6 @@
 		0768850120AD5C070009E1D7 = {
 			isa = PBXGroup;
 			children = (
-				07528EE0211AD5AC00623FF6 /* Default-568h@2x.png */,
 				0768850C20AD5C070009E1D7 /* BlueToothAbout */,
 				0768852520AD5C160009E1D7 /* BlueToothAboutTests */,
 				0768853020AD5C160009E1D7 /* BlueToothAboutUITests */,
@@ -457,6 +474,7 @@
 		0768850C20AD5C070009E1D7 /* BlueToothAbout */ = {
 			isa = PBXGroup;
 			children = (
+				07528EE4211D69AE00623FF6 /* MoreViews */,
 				07197A5B20B2A3F600F806E6 /* PrefixHeader.pch */,
 				0768851B20AD5C160009E1D7 /* Info.plist */,
 				07528EDA211A842100623FF6 /* frontVC */,
@@ -851,7 +869,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0770991C20CE5237003C3B7B /* msg.caf in Resources */,
-				07528EE1211AD5AC00623FF6 /* Default-568h@2x.png in Resources */,
 				07528EE3211AD8E100623FF6 /* note in Resources */,
 				07528ED921182D9400623FF6 /* LocalCell.xib in Resources */,
 				0770992820D0BE75003C3B7B /* Property List.plist in Resources */,
@@ -948,6 +965,7 @@
 				075A6F7720E367A600DF1F2E /* ServiceTool.m in Sources */,
 				075A6F7320E35F0500DF1F2E /* MVPViewController.m in Sources */,
 				077C3FB020BD35110063FD56 /* ScoketManger.m in Sources */,
+				07528EE8211D69E500623FF6 /* ZAnimatianView.m in Sources */,
 				074E387220D8E07800C3469A /* SubReadOnlyObj.m in Sources */,
 				075E434920B3ACE3007B1DF3 /* FriendModel.m in Sources */,
 				074E387C20DA314600C3469A /* FingerPwdViewController.m in Sources */,
