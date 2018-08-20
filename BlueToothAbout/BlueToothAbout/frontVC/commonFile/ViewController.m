@@ -32,6 +32,7 @@
 #import <SDWebImage/SDImageCache.h>
 
 #import "ZHRefreshComponet.h"
+#import "NSObject+ZHObject.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,GKPeerPickerControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>
 {
@@ -143,6 +144,8 @@
     date.layer.masksToBounds = YES;
     
     lineView *lin = [[lineView alloc] initWithFrame:CGRectMake(0, 100, 375, 100)];
+    
+    manger.title = @"manam";
 //    [self.view addSubview:lin];
     
 //    self.ref = [[ZHRefreshComponet alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
@@ -187,6 +190,7 @@
     
 //    LocalMsgVC *vc = [LocalMsgVC new];
 //    [self.navigationController pushViewController:vc animated:YES];
+    NSLog(@"title:%@",manger.title);
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

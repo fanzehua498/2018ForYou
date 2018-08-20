@@ -18,6 +18,7 @@ PODS:
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
+  - LKImageKit (5.3.1)
   - Masonry (1.1.0)
   - OCSkeleton (0.5.0)
   - ReactiveObjC (3.1.0)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - AFNetworking
   - CocoaAsyncSocket
   - FMDB
+  - LKImageKit
   - Masonry
   - OCSkeleton
   - ReactiveObjC
@@ -41,6 +43,7 @@ SPEC REPOS:
     - AFNetworking
     - CocoaAsyncSocket
     - FMDB
+    - LKImageKit
     - Masonry
     - OCSkeleton
     - ReactiveObjC
@@ -51,12 +54,13 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  LKImageKit: 668c6743f264a170b9e9e34c22c901224e619d86
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   OCSkeleton: 8d022735d80f36ac38b38c58e1fb90db05357616
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: e199a439c9c5ad45dc6ed4f9bc4283a21bb829c7
+PODFILE CHECKSUM: 796c3f19cfe30692fd4ef4fa21b63b25c413521f
 
 COCOAPODS: 1.5.3

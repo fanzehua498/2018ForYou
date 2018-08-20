@@ -35,6 +35,8 @@
 		0762E3C720B555FD00FC8BDA /* DistanceUIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762E3C620B555FD00FC8BDA /* DistanceUIAlertView.m */; };
 		0762E3D020B5845000FC8BDA /* ZHPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762E3CF20B5845000FC8BDA /* ZHPhoneTextField.m */; };
 		0763DD4B20C662E600071F16 /* AsySocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0763DD4A20C662E600071F16 /* AsySocketViewController.m */; };
+		0764A3BA212A9B29007259F3 /* NSObject+ZHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0764A3B9212A9B29007259F3 /* NSObject+ZHObject.m */; };
+		0764A3BD212ABF53007259F3 /* KeywordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0764A3BC212ABF53007259F3 /* KeywordObject.m */; };
 		0768850F20AD5C070009E1D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768850E20AD5C070009E1D7 /* AppDelegate.m */; };
 		0768851220AD5C070009E1D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768851120AD5C070009E1D7 /* ViewController.m */; };
 		0768851520AD5C070009E1D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0768851320AD5C070009E1D7 /* Main.storyboard */; };
@@ -150,6 +152,10 @@
 		0762E3CF20B5845000FC8BDA /* ZHPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPhoneTextField.m; sourceTree = "<group>"; };
 		0763DD4920C662E600071F16 /* AsySocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsySocketViewController.h; sourceTree = "<group>"; };
 		0763DD4A20C662E600071F16 /* AsySocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsySocketViewController.m; sourceTree = "<group>"; };
+		0764A3B8212A9B29007259F3 /* NSObject+ZHObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZHObject.h"; sourceTree = "<group>"; };
+		0764A3B9212A9B29007259F3 /* NSObject+ZHObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZHObject.m"; sourceTree = "<group>"; };
+		0764A3BB212ABF53007259F3 /* KeywordObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeywordObject.h; sourceTree = "<group>"; };
+		0764A3BC212ABF53007259F3 /* KeywordObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeywordObject.m; sourceTree = "<group>"; };
 		0768850A20AD5C070009E1D7 /* BlueToothAbout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothAbout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0768850D20AD5C070009E1D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0768850E20AD5C070009E1D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -449,6 +455,17 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		0764A3B7212A6983007259F3 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				0764A3BB212ABF53007259F3 /* KeywordObject.h */,
+				0764A3BC212ABF53007259F3 /* KeywordObject.m */,
+				0764A3B8212A9B29007259F3 /* NSObject+ZHObject.h */,
+				0764A3B9212A9B29007259F3 /* NSObject+ZHObject.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		0768850120AD5C070009E1D7 = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +491,7 @@
 		0768850C20AD5C070009E1D7 /* BlueToothAbout */ = {
 			isa = PBXGroup;
 			children = (
+				0764A3B7212A6983007259F3 /* category */,
 				07528EE4211D69AE00623FF6 /* MoreViews */,
 				07197A5B20B2A3F600F806E6 /* PrefixHeader.pch */,
 				0768851B20AD5C160009E1D7 /* Info.plist */,
@@ -909,6 +927,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/LKImageKit/LKImageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/OCSkeleton/OCSkeleton.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
@@ -920,6 +939,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LKImageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCSkeleton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
@@ -966,6 +986,7 @@
 				075A6F7320E35F0500DF1F2E /* MVPViewController.m in Sources */,
 				077C3FB020BD35110063FD56 /* ScoketManger.m in Sources */,
 				07528EE8211D69E500623FF6 /* ZAnimatianView.m in Sources */,
+				0764A3BA212A9B29007259F3 /* NSObject+ZHObject.m in Sources */,
 				074E387220D8E07800C3469A /* SubReadOnlyObj.m in Sources */,
 				075E434920B3ACE3007B1DF3 /* FriendModel.m in Sources */,
 				074E387C20DA314600C3469A /* FingerPwdViewController.m in Sources */,
@@ -1006,6 +1027,7 @@
 				071DDE3E210B1ADF009158DA /* lineView.m in Sources */,
 				07EAF47920BE720E00B3284C /* ChatMeCell.m in Sources */,
 				074E387820D900EA00C3469A /* MsgInvocation.m in Sources */,
+				0764A3BD212ABF53007259F3 /* KeywordObject.m in Sources */,
 				075E434C20B3F697007B1DF3 /* MCBViewController.m in Sources */,
 				07F9876420BBD82400FD5A6D /* DataManger.m in Sources */,
 				074E386F20D8CD9900C3469A /* ReadOnlyObj.m in Sources */,
