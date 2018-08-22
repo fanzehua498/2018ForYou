@@ -49,6 +49,7 @@
 
 @property (nonatomic ,strong) ZHRefreshComponet *ref;
 
+//@property(copy,nonatomic)NSMutableArray *dadadaArr;
 
 @end
 
@@ -171,11 +172,18 @@
 //    date.layer.mask = sharp;
     
     [self viewAnimation];
-}
+    
+//    NSMutableArray *array = [NSMutableArray arrayWithObjects:@1,@2,nil];
+//    self.dadadaArr = [NSMutableArray array];
+//    [self.dadadaArr addObjectsFromArray:array];
+//    NSLog(@"1:%@",self.dadadaArr);
+////    [self.dadadaArr removeObjectAtIndex:0];
+//    NSLog(@"2:%@",self.dadadaArr);
+//}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-  
+    NSLog(@"3:%@",self.dadadaArr);
 //    redView.transform = CGAffineTransformMakeRotation(-M_PI_4);
 //    redView.transform = CGAffineTransformRotate(redView.transform, -M_PI_4);
     redView.layer.transform = CATransform3DRotate(redView.layer.transform, -M_PI_4, 0, 1, 0);
