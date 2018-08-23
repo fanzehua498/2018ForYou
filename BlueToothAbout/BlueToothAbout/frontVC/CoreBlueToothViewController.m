@@ -57,8 +57,8 @@
      CBCentralManagerStateUnauthorized = CBManagerStateUnauthorized, 未授权
      CBCentralManagerStatePoweredOff = CBManagerStatePoweredOff, 没有开启
      CBCentralManagerStatePoweredOn = CBManagerStatePoweredOn, 开启
-     
      */
+    
     NSLog(@"statte:%zd",central.state);
     if (central.state == CBManagerStateUnsupported) {
         //不支持
@@ -171,8 +171,6 @@
     }else{
         cell.textLabel.text = [per.identifier.UUIDString stringByAppendingString:@"获取不到name"] ;
     }
-    
-    
     return cell;
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PersonObj.h"
 @interface USEVC : UIViewController
-
+@property(copy,nonatomic)PersonObj *pObj;
 @end

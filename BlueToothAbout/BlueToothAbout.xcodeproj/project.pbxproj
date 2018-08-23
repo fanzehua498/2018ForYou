@@ -37,6 +37,9 @@
 		0763DD4B20C662E600071F16 /* AsySocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0763DD4A20C662E600071F16 /* AsySocketViewController.m */; };
 		0764A3BA212A9B29007259F3 /* NSObject+ZHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0764A3B9212A9B29007259F3 /* NSObject+ZHObject.m */; };
 		0764A3BD212ABF53007259F3 /* KeywordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0764A3BC212ABF53007259F3 /* KeywordObject.m */; };
+		0764A3C4212E82C3007259F3 /* PersonObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 0764A3C3212E82C2007259F3 /* PersonObj.m */; };
+		0764A3CC212E9BC0007259F3 /* UserMvvm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0764A3CB212E9BC0007259F3 /* UserMvvm.m */; };
+		0764A3CF212E9BFB007259F3 /* UserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0764A3CE212E9BFB007259F3 /* UserViewModel.m */; };
 		0768850F20AD5C070009E1D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768850E20AD5C070009E1D7 /* AppDelegate.m */; };
 		0768851220AD5C070009E1D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768851120AD5C070009E1D7 /* ViewController.m */; };
 		0768851520AD5C070009E1D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0768851320AD5C070009E1D7 /* Main.storyboard */; };
@@ -156,6 +159,12 @@
 		0764A3B9212A9B29007259F3 /* NSObject+ZHObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZHObject.m"; sourceTree = "<group>"; };
 		0764A3BB212ABF53007259F3 /* KeywordObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeywordObject.h; sourceTree = "<group>"; };
 		0764A3BC212ABF53007259F3 /* KeywordObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeywordObject.m; sourceTree = "<group>"; };
+		0764A3C2212E82C2007259F3 /* PersonObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonObj.h; sourceTree = "<group>"; };
+		0764A3C3212E82C2007259F3 /* PersonObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonObj.m; sourceTree = "<group>"; };
+		0764A3CA212E9BC0007259F3 /* UserMvvm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserMvvm.h; sourceTree = "<group>"; };
+		0764A3CB212E9BC0007259F3 /* UserMvvm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserMvvm.m; sourceTree = "<group>"; };
+		0764A3CD212E9BFB007259F3 /* UserViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewModel.h; sourceTree = "<group>"; };
+		0764A3CE212E9BFB007259F3 /* UserViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewModel.m; sourceTree = "<group>"; };
 		0768850A20AD5C070009E1D7 /* BlueToothAbout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothAbout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0768850D20AD5C070009E1D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0768850E20AD5C070009E1D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -466,6 +475,66 @@
 			path = category;
 			sourceTree = "<group>";
 		};
+		0764A3C0212E826D007259F3 /* copy */ = {
+			isa = PBXGroup;
+			children = (
+				0764A3C1212E827A007259F3 /* Model、 */,
+			);
+			path = copy;
+			sourceTree = "<group>";
+		};
+		0764A3C1212E827A007259F3 /* Model、 */ = {
+			isa = PBXGroup;
+			children = (
+				0764A3C2212E82C2007259F3 /* PersonObj.h */,
+				0764A3C3212E82C2007259F3 /* PersonObj.m */,
+			);
+			path = "Model、";
+			sourceTree = "<group>";
+		};
+		0764A3C5212E9B60007259F3 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				0764A3C9212E9B98007259F3 /* Model */,
+				0764A3C8212E9B86007259F3 /* Controller */,
+				0764A3C7212E9B76007259F3 /* ViewModel */,
+				0764A3C6212E9B6A007259F3 /* View */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		0764A3C6212E9B6A007259F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0764A3C7212E9B76007259F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0764A3CD212E9BFB007259F3 /* UserViewModel.h */,
+				0764A3CE212E9BFB007259F3 /* UserViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0764A3C8212E9B86007259F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0764A3C9212E9B98007259F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0764A3CA212E9BC0007259F3 /* UserMvvm.h */,
+				0764A3CB212E9BC0007259F3 /* UserMvvm.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0768850120AD5C070009E1D7 = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +560,8 @@
 		0768850C20AD5C070009E1D7 /* BlueToothAbout */ = {
 			isa = PBXGroup;
 			children = (
+				0764A3C5212E9B60007259F3 /* MVVM */,
+				0764A3C0212E826D007259F3 /* copy */,
 				0764A3B7212A6983007259F3 /* category */,
 				07528EE4211D69AE00623FF6 /* MoreViews */,
 				07197A5B20B2A3F600F806E6 /* PrefixHeader.pch */,
@@ -1006,6 +1077,7 @@
 				076C668520EDB5DC00A25744 /* ShapeView.m in Sources */,
 				0768850F20AD5C070009E1D7 /* AppDelegate.m in Sources */,
 				07E8E1D420F5985A00176D0E /* BoomBoomBoomView.m in Sources */,
+				0764A3CC212E9BC0007259F3 /* UserMvvm.m in Sources */,
 				076C665520EA000A00A25744 /* USEVC.m in Sources */,
 				07E8E1C820F348A800176D0E /* LetterIndexView.m in Sources */,
 				07528EDF211A867200623FF6 /* ZHZombieProxy.m in Sources */,
@@ -1028,8 +1100,10 @@
 				07EAF47920BE720E00B3284C /* ChatMeCell.m in Sources */,
 				074E387820D900EA00C3469A /* MsgInvocation.m in Sources */,
 				0764A3BD212ABF53007259F3 /* KeywordObject.m in Sources */,
+				0764A3CF212E9BFB007259F3 /* UserViewModel.m in Sources */,
 				075E434C20B3F697007B1DF3 /* MCBViewController.m in Sources */,
 				07F9876420BBD82400FD5A6D /* DataManger.m in Sources */,
+				0764A3C4212E82C3007259F3 /* PersonObj.m in Sources */,
 				074E386F20D8CD9900C3469A /* ReadOnlyObj.m in Sources */,
 				075A6F7A20E36ACF00DF1F2E /* Presenter.m in Sources */,
 				07EAF47620BE71F200B3284C /* ChatFriendsCell.m in Sources */,

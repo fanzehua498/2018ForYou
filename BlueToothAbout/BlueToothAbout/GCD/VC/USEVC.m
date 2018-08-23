@@ -91,6 +91,9 @@ __weak NSString *weak_String = nil;
         dispatch_semaphore_signal(sema);
     });
     
+    
+    NSLog(@"----%@---%@",self.pObj,self.pObj.name);
+    
 }
 
 
