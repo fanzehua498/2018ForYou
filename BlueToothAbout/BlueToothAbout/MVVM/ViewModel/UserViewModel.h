@@ -11,8 +11,8 @@
 
 @interface UserViewModel : NSObject
 
-@property (nonatomic ,strong) UserMvvm *user;
-@property(copy,nonatomic)NSString *userName;
+@property (nonatomic ,strong,readonly) UserMvvm *user;
+@property(copy,nonatomic,readonly)NSString *userName;
 
 - (instancetype)initWithUser:(UserMvvm *)user;
 

@@ -27,11 +27,14 @@
 
 -(CGFloat)assPro
 {
+    NSNumber *number = objc_getAssociatedObject(self, "zh_assPro");
+    return number.floatValue;
     return 100;
 }
 -(void)setAssPro:(CGFloat)assPro
 {
-    self.assPro = assPro;
+    objc_setAssociatedObject(self, "zh_assPro", [NSNumber numberWithFloat:assPro], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//    self.assPro = assPro;
 }
 
 @end

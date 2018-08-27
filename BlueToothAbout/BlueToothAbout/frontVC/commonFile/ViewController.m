@@ -34,6 +34,8 @@
 #import "ZHRefreshComponet.h"
 #import "NSObject+ZHObject.h"
 #import "PersonObj.h"
+#import "UIView+CornerRadius.h"
+#import "UIView+ZHExtension.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,GKPeerPickerControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>
 {
@@ -154,10 +156,13 @@
 //    self.ref.backgroundColor = [UIColor grayColor];
 //    [self.view addSubview:self.ref];
     
-//    UserHitView *hit = [[UserHitView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
-//    hit.backgroundColor = [UIColor grayColor];
-//    [self.view addSubview:hit];
-//    
+    UserHitView *hit = [[UserHitView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
+    hit.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:hit];
+    [hit ZH_AddCornerRadius:50 bounds:hit.bounds];
+    hit.assPro = 0.1;
+    NSLog(@"%f",hit.assPro);
+//
 //    UserSubOneView *sub = [[UserSubOneView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
 //    [self.view addSubview:sub];
 //    sub.backgroundColor = [UIColor orangeColor];
@@ -195,7 +200,7 @@
     USEVC *vc = [USEVC new];
     vc.pObj = pObj;
 
-    [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController pushViewController:vc animated:YES];
 //
 //    FactoryVC *vc = [FactoryVC new];
 //    [self.navigationController pushViewController:vc animated:YES];
