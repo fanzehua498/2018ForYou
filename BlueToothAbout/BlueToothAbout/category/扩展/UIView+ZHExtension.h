@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+volatile NSString *s;
+
 @interface UIView ()
 @property(copy,nonatomic)NSString *extension;
 - (void)extensionA;

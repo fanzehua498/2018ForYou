@@ -12,6 +12,8 @@
 
 -(id)copyWithZone:(NSZone *)zone
 {
+//    Method *metohd = method
+    
     PersonObj *model = [[PersonObj alloc] init];
     model.name = self.name;
     

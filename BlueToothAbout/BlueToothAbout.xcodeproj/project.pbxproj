@@ -50,6 +50,7 @@
 		0768853220AD5C160009E1D7 /* BlueToothAboutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768853120AD5C160009E1D7 /* BlueToothAboutUITests.m */; };
 		0768854120AD785E0009E1D7 /* CoreBlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768854020AD785E0009E1D7 /* CoreBlueToothViewController.m */; };
 		076BF57B2133C41D0078E8AA /* UIView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 076BF57A2133C41D0078E8AA /* UIView+CornerRadius.m */; };
+		076BF586213528F50078E8AA /* BasicTheory in Resources */ = {isa = PBXBuildFile; fileRef = 076BF585213528F50078E8AA /* BasicTheory */; };
 		076C665520EA000A00A25744 /* USEVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C665420EA000A00A25744 /* USEVC.m */; };
 		076C668020EDB5B000A25744 /* LineDotChangeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C667E20EDB5AE00A25744 /* LineDotChangeVC.m */; };
 		076C668520EDB5DC00A25744 /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 076C668120EDB5DC00A25744 /* ShapeView.m */; };
@@ -187,6 +188,7 @@
 		076BF5792133C41D0078E8AA /* UIView+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CornerRadius.h"; sourceTree = "<group>"; };
 		076BF57A2133C41D0078E8AA /* UIView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRadius.m"; sourceTree = "<group>"; };
 		076BF57D2133D7B10078E8AA /* UIView+ZHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZHExtension.h"; sourceTree = "<group>"; };
+		076BF585213528F50078E8AA /* BasicTheory */ = {isa = PBXFileReference; lastKnownFileType = text; path = BasicTheory; sourceTree = "<group>"; };
 		076C665320EA000A00A25744 /* USEVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USEVC.h; sourceTree = "<group>"; };
 		076C665420EA000A00A25744 /* USEVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USEVC.m; sourceTree = "<group>"; };
 		076C667E20EDB5AE00A25744 /* LineDotChangeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDotChangeVC.m; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 		0768850C20AD5C070009E1D7 /* BlueToothAbout */ = {
 			isa = PBXGroup;
 			children = (
+				076BF5822135285C0078E8AA /* 2018.08.28 */,
 				0764A3C5212E9B60007259F3 /* MVVM */,
 				0764A3C0212E826D007259F3 /* copy */,
 				0764A3B7212A6983007259F3 /* category */,
@@ -613,6 +616,14 @@
 				076BF57D2133D7B10078E8AA /* UIView+ZHExtension.h */,
 			);
 			path = "扩展";
+			sourceTree = "<group>";
+		};
+		076BF5822135285C0078E8AA /* 2018.08.28 */ = {
+			isa = PBXGroup;
+			children = (
+				076BF585213528F50078E8AA /* BasicTheory */,
+			);
+			path = 2018.08.28;
 			sourceTree = "<group>";
 		};
 		076C664F20E9FFC000A25744 /* GCD */ = {
@@ -980,6 +991,7 @@
 				075A6F7C20E381ED00DF1F2E /* blueTeeth.plist in Resources */,
 				0768851A20AD5C160009E1D7 /* LaunchScreen.storyboard in Resources */,
 				0768851720AD5C160009E1D7 /* Assets.xcassets in Resources */,
+				076BF586213528F50078E8AA /* BasicTheory in Resources */,
 				07528ED121181E4400623FF6 /* Local.plist in Resources */,
 				0768851520AD5C070009E1D7 /* Main.storyboard in Resources */,
 				07EAF46C20BE3C5C00B3284C /* SocketViewController.xib in Resources */,

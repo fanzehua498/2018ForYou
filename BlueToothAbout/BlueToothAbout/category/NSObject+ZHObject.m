@@ -17,7 +17,11 @@
 
 -(void)setTitle:(NSString *)title
 {
+    [self willChangeValueForKey:title];
+    
     objc_setAssociatedObject(self, "titleGet", title, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
+    [self didChangeValueForKey:title];
 }
 
 -(NSString *)title
