@@ -25,6 +25,16 @@
     zhLayer.frame = rect;
     zhLayer.path = path.CGPath;
     self.layer.mask = zhLayer;
+    NSTimer *time = [NSTimer timerWithTimeInterval:0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+    }];
+    [[NSRunLoop mainRunLoop] addTimer:time forMode:NSRunLoopCommonModes];
+//    NSThread *theard = [[NSThread alloc] initWithBlock:^{
+//        [[NSRunLoop currentRunLoop] run];
+//    }];
+//    [theard start];
+    //
+//    [NSRunLoop mainRunLoop] addTimer:<#(nonnull NSTimer *)#> forMode:<#(nonnull NSRunLoopMode)#>
 }
 
 

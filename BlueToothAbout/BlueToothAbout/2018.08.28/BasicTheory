@@ -54,3 +54,7 @@ aw：viewDidload在view从nib文件初始化时调用。 初始化相关元素
 
 6.method与selector有什么不同？
     selector是一个方法的名字，method是一个组合体，包含了名字和实现
+
+
+7.id、nil代表什么？
+
