@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import <WatchKit/WatchKit.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 @interface AppDelegate ()
 
 @end
@@ -23,9 +24,18 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     
+    [self watchConnect];
     return YES;
 }
 
+- (void)watchConnect
+{
+    WCSession *seeion = [WCSession defaultSession];
+    seeion.delegate = self;
+    [seeion activateSession];
+    
+    [seeion sendMessage:@{@"value":@"cccccc"} replyHandler:nil errorHandler:nil];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

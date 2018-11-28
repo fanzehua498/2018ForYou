@@ -158,7 +158,7 @@
     
     UserHitView *hit = [[UserHitView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
     hit.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:hit];
+//    [self.view addSubview:hit];
     [hit ZH_AddCornerRadius:50 bounds:hit.bounds];
     hit.assPro = 0.1;
     NSLog(@"%f",hit.assPro);
@@ -271,7 +271,8 @@
 //    imageViewController*c = [imageViewController new];
 //    [self.navigationController pushViewController:c animated:YES];
     
-    MVPViewController *c = [MVPViewController new];
+    CoreBlueToothViewController *c = [CoreBlueToothViewController new];
+//    MVPViewController *c = [MVPViewController new];
     [self.navigationController pushViewController:c animated:YES];
     
     
