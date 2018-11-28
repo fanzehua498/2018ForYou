@@ -1,0 +1,6 @@
+framework module LKImageKit {
+  umbrella header "LKImageKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
