@@ -36,6 +36,11 @@
 #import "PersonObj.h"
 #import "UIView+CornerRadius.h"
 #import "UIView+ZHExtension.h"
+#import "ModifyReadonly.h"
+#import "ZHZombieProxy.h"
+
+
+#import "sortModel.h"
 
 @interface ViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,GKPeerPickerControllerDelegate,UITextFieldDelegate,UIAlertViewDelegate>
 {
@@ -185,6 +190,43 @@
 //    NSLog(@"1:%@",self.dadadaArr);
 ////    [self.dadadaArr removeObjectAtIndex:0];
 //    NSLog(@"2:%@",self.dadadaArr);
+    ModifyReadonly *readON = [[ModifyReadonly alloc] initWithName:@"modeify"];
+    NSLog(@"改变前:%@",readON.name);
+    
+//    [readON setValue:@"readOnly" forKey:@"name"];
+    NSLog(@"改变后:%@",readON.name);
+    
+//    Dog *dog = [ZHZombieProxy proxyWithObj:[Dog alloc]] ;
+//    [dog barking:4];
+    
+    sortModel *model1 = [sortModel new];
+    model1.name = @"mode1";
+    model1.TypeCode = @"99";
+    sortModel *model2 = [sortModel new];
+    model2.name = @"mode2";
+    model2.TypeCode = @"99";
+    sortModel *model3 = [sortModel new];
+    model3.name = @"mode3";
+    model3.TypeCode = @"01";
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:model1,model2,model3, nil];
+    
+    NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"TypeCode" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:&sorter count:1];
+    [array sortUsingDescriptors:sortDescriptors];
+    NSLog(@"%@", array);
+    
+    
+    
+    NSMutableArray*foraarr = [NSMutableArray arrayWithArray:@[@"10",@"10",@"1",@"2",@"10",@"10",@"3",@"4",@"10",@"5",@"6",@"7",@"10",@"10"]];
+    
+    for (int i = 0; i < foraarr.count; i ++) {
+        if ([foraarr[i] isEqualToString:@"10"]) {
+            [foraarr removeObjectAtIndex:i];
+            i--;
+        }
+        NSLog(@"%d --- %lu",i,(unsigned long)foraarr.count);
+    }
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -268,10 +310,10 @@
 //    FingerPwdViewController * c = [FingerPwdViewController new];
 //    [self.navigationController pushViewController:c animated:YES];
 //    [self presentViewController:c animated:YES completion:nil];
-//    imageViewController*c = [imageViewController new];
+    imageViewController*c = [imageViewController new];
 //    [self.navigationController pushViewController:c animated:YES];
     
-    CoreBlueToothViewController *c = [CoreBlueToothViewController new];
+//    CoreBlueToothViewController *c = [CoreBlueToothViewController new];
 //    MVPViewController *c = [MVPViewController new];
     [self.navigationController pushViewController:c animated:YES];
     

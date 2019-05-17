@@ -34,7 +34,26 @@
 //    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 //        
 //    }];
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"] options:SDWebImageProgressiveDownload completed:nil];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [[SDImageCache sharedImageCache] queryCacheOperationForKey:url done:^(UIImage * _Nullable image, NSData * _Nullable data, SDImageCacheType cacheType) {
+            if (image) {
+                self.imageView.image = image;
+            }else{
+//                self.imageView.image = [UIImage imageNamed:@"head"];
+                [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"] options:SDWebImageRefreshCached completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                    if (image) {
+                        [[SDImageCache sharedImageCache] storeImage:image forKey:url toDisk:YES completion:^{
+
+                        }];
+                    }else{
+
+                    }
+                }];
+            }
+        }];
+
+    });
+//    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"head"] options:SDWebImageProgressiveDownload completed:nil];
 }
 
 - (void)awakeFromNib {

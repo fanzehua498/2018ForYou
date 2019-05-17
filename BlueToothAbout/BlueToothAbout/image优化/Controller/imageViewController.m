@@ -49,6 +49,8 @@
 #import "PopItemView.h"
 #import "BoomBoomBoomView.h"
 #import "ListModel.h"
+#import <YYImage/YYImage.h>
+
 typedef void(^runloopBlock)(void);
 
 typedef void(^imageBlock)(UIImageView *imageView);
@@ -330,6 +332,9 @@ static BOOL SDImagedownloderOldShouldDecompressImages = YES;
 //            });
 //        });
      NSString *url = self.dataArr[indexPath.row ];
+    
+//    [SDImageCache sharedImageCache] queryCacheOperationForKey:<#(nullable NSString *)#> done:<#^(UIImage * _Nullable image, NSData * _Nullable data, SDImageCacheType cacheType)doneBlock#>
+    
     [cell configImageWithUrl:url];
         @autoreleasepool{
 //            NSString *url = self.dataArr[indexPath.row ];

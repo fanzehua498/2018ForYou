@@ -82,6 +82,8 @@
 		07F1DAA32112EE0B00DB05C6 /* UserHitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DAA22112EE0B00DB05C6 /* UserHitView.m */; };
 		07F1DAA62112F04A00DB05C6 /* UserSubOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DAA52112F04A00DB05C6 /* UserSubOneView.m */; };
 		07F9876420BBD82400FD5A6D /* DataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9876320BBD82400FD5A6D /* DataManger.m */; };
+		9311BEA021B4DC0500D57D38 /* ModifyReadonly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9311BE9F21B4DC0500D57D38 /* ModifyReadonly.m */; };
+		9317777A21B6229200C83C64 /* sortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9317777921B6229200C83C64 /* sortModel.m */; };
 		E08142158A15BC884E134FEC /* Pods_BlueToothAbout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855A6E05CB1F34DAA2DEA4DD /* Pods_BlueToothAbout.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -252,6 +254,10 @@
 		07F9876320BBD82400FD5A6D /* DataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManger.m; sourceTree = "<group>"; };
 		31338BADA1B15EFBC441D400 /* Pods-BlueToothAbout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothAbout.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout.release.xcconfig"; sourceTree = "<group>"; };
 		855A6E05CB1F34DAA2DEA4DD /* Pods_BlueToothAbout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueToothAbout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9311BE9E21B4DC0500D57D38 /* ModifyReadonly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyReadonly.h; sourceTree = "<group>"; };
+		9311BE9F21B4DC0500D57D38 /* ModifyReadonly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyReadonly.m; sourceTree = "<group>"; };
+		9317777821B6229200C83C64 /* sortModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sortModel.h; sourceTree = "<group>"; };
+		9317777921B6229200C83C64 /* sortModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sortModel.m; sourceTree = "<group>"; };
 		9BF2AC37C7B62389E8E5792F /* Pods-BlueToothAbout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothAbout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlueToothAbout/Pods-BlueToothAbout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -394,6 +400,8 @@
 				0768851020AD5C070009E1D7 /* ViewController.h */,
 				0768851120AD5C070009E1D7 /* ViewController.m */,
 				07197A5C20B2A5C500F806E6 /* Header.h */,
+				9317777821B6229200C83C64 /* sortModel.h */,
+				9317777921B6229200C83C64 /* sortModel.m */,
 			);
 			path = commonFile;
 			sourceTree = "<group>";
@@ -540,6 +548,8 @@
 			children = (
 				0764A3CA212E9BC0007259F3 /* UserMvvm.h */,
 				0764A3CB212E9BC0007259F3 /* UserMvvm.m */,
+				9311BE9E21B4DC0500D57D38 /* ModifyReadonly.h */,
+				9311BE9F21B4DC0500D57D38 /* ModifyReadonly.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1030,6 +1040,8 @@
 				"${BUILT_PRODUCTS_DIR}/OCSkeleton/OCSkeleton.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1042,6 +1054,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCSkeleton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1115,6 +1129,7 @@
 				078094B420FECAED0009E5B7 /* NSObject+KVOReloadCategory.m in Sources */,
 				07EAF46B20BE3C5C00B3284C /* SocketViewController.m in Sources */,
 				078094BD21005B740009E5B7 /* NikiFactory.m in Sources */,
+				9311BEA021B4DC0500D57D38 /* ModifyReadonly.m in Sources */,
 				076BF57B2133C41D0078E8AA /* UIView+CornerRadius.m in Sources */,
 				07528ED421182C9A00623FF6 /* LocalMsgModel.m in Sources */,
 				07528ED821182D9400623FF6 /* LocalCell.m in Sources */,
@@ -1134,6 +1149,7 @@
 				0764A3C4212E82C3007259F3 /* PersonObj.m in Sources */,
 				074E386F20D8CD9900C3469A /* ReadOnlyObj.m in Sources */,
 				075A6F7A20E36ACF00DF1F2E /* Presenter.m in Sources */,
+				9317777A21B6229200C83C64 /* sortModel.m in Sources */,
 				07EAF47620BE71F200B3284C /* ChatFriendsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

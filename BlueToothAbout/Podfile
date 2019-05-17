@@ -7,6 +7,8 @@ pod 'AFNetworking'
 pod 'OCSkeleton'
 pod 'ReactiveObjC'
 pod 'YYModel'
+pod 'YYCache'
+pod 'YYImage'
 pod 'LKImageKit'
 use_frameworks!
 end
